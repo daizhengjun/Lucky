@@ -26,6 +26,7 @@ function createWindow() {
         // title: "This is a title",
         skipTaskbar: false,
         autoHideMenuBar: true,
+        hasShadow: true,
         webPreferences: { nodeIntegration: true }
     });
     position = win.getPosition();
@@ -76,8 +77,7 @@ ipcMain.on("minimize", e => {
 })
 
 ipcMain.on("maximize", e => {
-    win.setSize(parseInt(screenSize.width), parseInt(screenSize.height));
-    win.setPosition(0, 0);
+    win.setFullScreen(true);
 })
 
 ipcMain.on("close", e => {
@@ -130,9 +130,12 @@ app.on("will-quit", () => {
 
 function registeEsc() {
     globalShortcut.register("Esc", () => {
-        win.setSize(parseInt(screenSize.width * 0.6), parseInt(screenSize.height * 0.6), true);
-        win.setPosition(position[0], position[1]);
-        win.webContents.send("restore");
+        if (win.isFullScreen()) {
+            console.log("Esc");
+            // win.setSize(500, 300, true);
+            // win.setPosition(position[0], position[1]);
+            win.webContents.send("restore");
+        }
     })
 }
 

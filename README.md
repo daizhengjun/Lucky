@@ -13,7 +13,7 @@
 
 >  如有问题请直接在 Issues 中提，或者您发现问题并有非常好的解决方案，欢迎 PR 👍
 
->  传送门：[前端项目地址](https://github.com/)
+>  传送门：[https://github.com/daizhengjun/Lucky.git]
 
 
 ## 技术栈
@@ -22,7 +22,7 @@ vue2 + vuex + vue-router + webpack + ES6/7 + less + element-ui + electron-vue
 
 ## 项目运行
 ```
-git clone https://github.com/
+git clone https://github.com/daizhengjun/Lucky.git
 
 cd lucky
 
@@ -37,15 +37,16 @@ npm run lint
 ```
 
 ### 参考
-See [Configuration Reference](https://cli.vuejs.org/config/).
-See [Configuration Reference](https://vuejs.org/v2/guide/).
-See [Configuration Reference](https://vuex.vuejs.org/).
-See [Configuration Reference](https://router.vuejs.org/).
-See [Configuration Reference](https://webpack.js.org/concepts/).
-See [Configuration Reference](https://www.jianshu.com/p/390a65d7a353).
-See [Configuration Reference](http://lesscss.cn/).
-See [Configuration Reference](https://element.eleme.cn/#/en-US/component/installation).
-See [Configuration Reference](https://simulatedgreg.gitbooks.io/electron-vue/content/cn/).
+
+>  See [https://cli.vuejs.org/config/](https://cli.vuejs.org/config/).
+>  See [https://vuejs.org/v2/guide/](https://vuejs.org/v2/guide/).
+>  See [https://vuex.vuejs.org/](https://vuex.vuejs.org/).
+>  See [https://router.vuejs.org/](https://router.vuejs.org/).
+>  See [https://webpack.js.org/concepts/](https://webpack.js.org/concepts/).
+>  See [https://www.jianshu.com/p/390a65d7a353](https://www.jianshu.com/p/390a65d7a353).
+>  See [http://lesscss.cn/](http://lesscss.cn/).
+>  See [https://element.eleme.cn/#/en-US/component/installation](https://element.eleme.cn/#/en-US/component/installation).
+>  See [https://simulatedgreg.gitbooks.io/electron-vue/content/cn/](https://simulatedgreg.gitbooks.io/electron-vue/content/cn/).
 
 # License
 

@@ -44,7 +44,7 @@ export default {
       showIcon: true,
       showTitleBar: true,
       showMin: true,
-      showMax: false,
+      showMax: true,
       showClose: true,
       src: "../assets/logo.png"
     };
@@ -109,12 +109,12 @@ export default {
 #btnMin {
   width: 40px;
   border: none;
-  background-color: transparent;
+  background-color: #427992;
 }
 #btnMax {
   width: 40px;
   border: none;
-  background-color: transparent;
+  background-color: #427992;
 }
 #btnMin #btnMax button.hover {
   background-color: #3f3f41;
@@ -122,7 +122,7 @@ export default {
 #btnClose {
   width: 50px;
   border: none;
-  background-color: transparent;
+  background-color: #427992;
 }
 #btnClose button.hover {
   background-color: red;

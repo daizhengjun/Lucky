@@ -42,5 +42,6 @@ body {
   top: 0px;
   left: 0px;
   background-color: #254053;
+  -webkit-app-region: drag;
 }
 </style>
