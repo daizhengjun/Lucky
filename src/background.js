@@ -10,8 +10,6 @@ const isDevelopment = process.env.NODE_ENV !== 'production'
 // Keep a global reference of the window object, if you don't, the window will
 // be closed automatically when the JavaScript object is garbage collected.
 let win
-let screenSize
-let position
 
 // Scheme must be registered before the app is ready
 protocol.registerSchemesAsPrivileged([{ scheme: 'app', privileges: { secure: true, standard: true } }])
@@ -21,6 +19,9 @@ function createWindow() {
     win = new BrowserWindow({
         width: 800,
         height: 600,
+        minWidth: 600,
+        minHeight: 50,
+        // fullscreen: true,
         useContentSize: true,
         frame: false,
         // title: "This is a title",
@@ -29,7 +30,6 @@ function createWindow() {
         hasShadow: true,
         webPreferences: { nodeIntegration: true }
     });
-    position = win.getPosition();
 
     if (process.env.WEBPACK_DEV_SERVER_URL) {
         // Load the url of the dev server if in development mode
@@ -119,7 +119,6 @@ app.on('ready', async() => {
         // }
 
     }
-    screenSize = screen.getPrimaryDisplay().workAreaSize;
     registeEsc();
     createWindow();
 })
@@ -132,8 +131,6 @@ function registeEsc() {
     globalShortcut.register("Esc", () => {
         if (win.isFullScreen()) {
             console.log("Esc");
-            // win.setSize(500, 300, true);
-            // win.setPosition(position[0], position[1]);
             win.webContents.send("restore");
         }
     })

@@ -39,14 +39,23 @@ npm run lint
 ### 参考
 
 >  See [https://cli.vuejs.org/config/](https://cli.vuejs.org/config/).
+
 >  See [https://vuejs.org/v2/guide/](https://vuejs.org/v2/guide/).
+
 >  See [https://vuex.vuejs.org/](https://vuex.vuejs.org/).
+
 >  See [https://router.vuejs.org/](https://router.vuejs.org/).
+
 >  See [https://webpack.js.org/concepts/](https://webpack.js.org/concepts/).
+
 >  See [https://www.jianshu.com/p/390a65d7a353](https://www.jianshu.com/p/390a65d7a353).
+
 >  See [http://lesscss.cn/](http://lesscss.cn/).
+
 >  See [https://element.eleme.cn/#/en-US/component/installation](https://element.eleme.cn/#/en-US/component/installation).
+
 >  See [https://simulatedgreg.gitbooks.io/electron-vue/content/cn/](https://simulatedgreg.gitbooks.io/electron-vue/content/cn/).
+
 
 # License
 

@@ -1,35 +1,39 @@
 <template>
-  <div id="titlebar" v-show="showTitleBar">
-    <!-- <img id="icon" src="../assets/logo.png" v-if="showIcon" /> -->
-    <i id="icon" class="el-icon-edit" v-if="showIcon"></i>
-    <!-- <el-img id="icon" :src="src"></el-img> -->
-    <!-- <el-avatar shape="square" size="small" fit="scale-down" :src="src"></el-avatar> -->
-    <div id="title">This is a title</div>
-    <div id="titlebtns">
-      <el-button
-        @click.left="btnMinClick"
-        v-if="showMin"
-        id="btnMin"
-        type="primary"
-        icon="el-icon-minus"
-        plain
-      ></el-button>
-      <el-button
-        @click.left="btnMaxClick"
-        v-if="showMax"
-        id="btnMax"
-        type="success"
-        icon="el-icon-full-screen"
-        plain
-      ></el-button>
-      <el-button
-        @click.left="btnCloseClick"
-        v-if="showClose"
-        id="btnClose"
-        type="info"
-        icon="el-icon-close"
-        plain
-      ></el-button>
+  <div class="titlebox" v-show="showTitleBar">
+    <div class="iconbox" v-if="showIcon">
+      <!-- <img id="icon" src="../assets/logo.png" v-if="showIcon" /> -->
+      <i class="el-icon-edit"></i>
+      <!-- <el-img id="icon" :src="src"></el-img> -->
+      <!-- <el-avatar shape="square" size="small" fit="scale-down" :src="src"></el-avatar> -->
+    </div>
+    <span class="textbox">This is a title</span>
+    <div class="btnsbox">
+      <el-button-group class="btngroup">
+        <el-button
+          @click.left="btnMinClick"
+          v-if="showMin"
+          class="btnMin"
+          type="primary"
+          icon="el-icon-minus"
+          plain
+        ></el-button>
+        <el-button
+          @click.left="btnMaxClick"
+          v-if="showMax"
+          class="btnMax"
+          type="primary"
+          icon="el-icon-full-screen"
+          plain
+        ></el-button>
+        <el-button
+          @click.left="btnCloseClick"
+          v-if="showClose"
+          class="btnClose"
+          type="danger"
+          icon="el-icon-close"
+          plain
+        ></el-button>
+      </el-button-group>
     </div>
   </div>
 </template>
@@ -70,61 +74,44 @@ export default {
 </script>
 
 <style lang="less" scoped>
-#titlebar {
-  display: block;
-  position: fixed;
+.titlebox {
   width: 100%;
-  height: 100%;
-  background-color: darkviolet;
+}
+.iconbox,
+.textbox,
+.btnsbox {
+  float: left;
+  background-color: rgb(238, 233, 233);
+  width: 33.3%;
+  height: 36px;
   -webkit-app-region: drag;
-  top: 0px;
-  position: fixed;
-  padding: none;
-  margin: 0px;
 }
-#icon {
-  position: fixed;
-  width: 20px;
-  height: 20px;
-  top: 2px;
-  left: 2px;
-  border-radius: 5px;
-  z-index: 1;
+.iconbox,
+.textbox {
+  display: flex;
+  align-items: center;
+  -webkit-app-region: drag;
 }
-#title {
-  position: fixed;
-  top: 0px;
-  left: 30px;
+.el-icon-edit {
+  margin-left: 5px;
 }
-#titlebtns {
+.textbox {
+  justify-content: center;
+}
+.btnsbox {
+  text-align: right;
+}
+.btngroup {
+  margin-right: -3px;
   -webkit-app-region: no-drag;
-  position: fixed;
-  height: 100%;
-  top: 0px;
-  right: 0px;
 }
-#titlebtns button.hover {
-  background-color: #3f3f41;
+.btnMin,
+.btnMax,
+.btnClose {
+  height: 36px;
+  border: 0px;
 }
-#btnMin {
-  width: 40px;
-  border: none;
-  background-color: #427992;
-}
-#btnMax {
-  width: 40px;
-  border: none;
-  background-color: #427992;
-}
-#btnMin #btnMax button.hover {
-  background-color: #3f3f41;
-}
-#btnClose {
-  width: 50px;
-  border: none;
-  background-color: #427992;
-}
-#btnClose button.hover {
-  background-color: red;
+.btnClose {
+  width: 60px;
 }
 </style>

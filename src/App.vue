@@ -1,47 +1,27 @@
 <template>
-  <div id="content">
-    <TitleBar id="caption" />
-    <!-- <div id="nav">
-      <router-link to="/">Home</router-link>|
-      <router-link to="/about">About</router-link>
-    </div>-->
-    <router-view />
+  <div class="win">
+    <TitleBar class="caption" />
+    <BodyContent class="context" />
   </div>
 </template>
 
 <script>
 import TitleBar from "./components/TitleBar";
+import BodyContent from "./views/BodyContent";
+
 export default {
   components: {
-    TitleBar
+    TitleBar,
+    BodyContent
   }
 };
 </script>
 
-<style lang="less" scoped>
-html {
-  margin: 0px;
-  padding: 0px;
-}
+<style lang="less">
 body {
-  height: 100%;
   margin: 0px;
-  padding: 0px;
 }
-#content {
-  height: 100%;
-  background-color: #254053;
-}
-#caption {
-  display: block;
-  position: fixed;
-  width: 100%;
-  height: 32px;
-  margin: 0px;
-  padding: 0px;
-  top: 0px;
-  left: 0px;
-  background-color: #254053;
-  -webkit-app-region: drag;
+.context {
+  background-color: aquamarine;
 }
 </style>
