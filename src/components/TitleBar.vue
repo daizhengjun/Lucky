@@ -13,7 +13,7 @@
           @click.left="btnMinClick"
           v-if="showMin"
           class="btnMin"
-          type="primary"
+          type="info"
           icon="el-icon-minus"
           plain
         ></el-button>
@@ -21,7 +21,7 @@
           @click.left="btnMaxClick"
           v-if="showMax"
           class="btnMax"
-          type="primary"
+          type="info"
           icon="el-icon-full-screen"
           plain
         ></el-button>
@@ -75,7 +75,8 @@ export default {
 
 <style lang="less" scoped>
 .titlebox {
-  width: 100%;
+  width: inherit;
+  height: inherit;
 }
 .iconbox,
 .textbox,

@@ -1,6 +1,6 @@
 <template>
   <div class="setwin">
-    <el-backtop target :visibility-height="height" @click="drawer = true"></el-backtop>
+    <el-backtop ref="sets" :visibility-height="height" @click="drawer = true"></el-backtop>
     <el-drawer
       custom-class="settingTitle"
       title="设置"
@@ -46,12 +46,16 @@ export default {
   methods: {
     handleClose(done) {
       done();
+      // alert("lost");
     }
+  },
+  mounted() {
+    this.$refs.sets.visible = true;
   }
 };
 </script>
 
-<style lang='less'>
+<style lang="less">
 .settingTitle {
   font-weight: bold;
   color: black;

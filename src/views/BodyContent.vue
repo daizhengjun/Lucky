@@ -1,7 +1,7 @@
 <template>
   <div class="content">
     <el-image class="bg" :src="bgimg" fit="fill"></el-image>
-    <div class="txt">{{msg}}</div>
+    <!-- <div class="txt">{{msg}}</div> -->
     <!-- <div class="view">
       <router-view />
     </div>-->
@@ -26,7 +26,7 @@ export default {
 };
 </script>
 
-<style lang='less'>
+<style lang="less">
 .content {
   display: flex;
   position: relative;
