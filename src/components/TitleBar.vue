@@ -74,15 +74,11 @@ export default {
 </script>
 
 <style lang="less" scoped>
-.titlebox {
-  width: inherit;
-  height: inherit;
-}
 .iconbox,
 .textbox,
 .btnsbox {
   float: left;
-  background-color: rgb(238, 233, 233);
+  background-color: transparent;
   width: 33.3%;
   height: 36px;
   -webkit-app-region: drag;

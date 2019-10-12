@@ -1,5 +1,7 @@
 'use strict'
 
+import logger from "./log/log4-config"
+
 import { app, protocol, BrowserWindow, ipcMain, globalShortcut, screen } from 'electron'
 import {
     createProtocol,
@@ -28,6 +30,7 @@ function createWindow() {
         skipTaskbar: false,
         autoHideMenuBar: true,
         hasShadow: true,
+        resizable: true,
         webPreferences: { nodeIntegration: true }
     });
 
@@ -77,7 +80,9 @@ ipcMain.on("minimize", e => {
 })
 
 ipcMain.on("maximize", e => {
-    win.setFullScreen(true);
+    if (!win.isFullScreen()) {
+        win.setFullScreen(true);
+    }
 })
 
 ipcMain.on("close", e => {
@@ -130,7 +135,7 @@ app.on("will-quit", () => {
 function registeEsc() {
     globalShortcut.register("Esc", () => {
         if (win.isFullScreen()) {
-            console.log("Esc");
+            logger.info("Esc");
             win.webContents.send("restore");
         }
     })

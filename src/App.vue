@@ -1,13 +1,13 @@
 <template>
   <div class="win">
     <el-container>
-      <el-header height="40px">
+      <el-header height="auto" class="header">
         <TitleBar class="caption" />
       </el-header>
       <el-main>
         <!-- <router-view class="view"></router-view> -->
-        <!-- <div class="view"></div> -->
-        <Winners />
+        <div class="view"></div>
+        <!-- <Winners /> -->
         <Settings />
       </el-main>
     </el-container>
@@ -40,23 +40,16 @@ body,
 body {
   overflow: hidden;
 }
-.el-header {
-  background-color: #b3c0d1;
-  color: #333;
-  text-align: center;
-  line-height: 36px;
+.el-container .el-header {
+  padding: 0px;
 }
-.el-main {
-  background-color: #e9eef3;
-  color: #333;
-  text-align: center;
-  line-height: 160px;
+.el-container .el-main {
+  padding: 0px;
 }
 .el-main::-webkit-scrollbar {
   display: none;
 }
 .view {
-  margin: -20px;
   width: 100%;
   height: 100%;
   background-image: url("./assets/bg.jpg");
