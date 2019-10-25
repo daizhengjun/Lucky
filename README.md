@@ -1,7 +1,7 @@
 # lucky
 
 # About
-抽奖助手
+Demo
 
 # 说明
 

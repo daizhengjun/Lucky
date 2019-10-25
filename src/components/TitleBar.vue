@@ -107,6 +107,7 @@ export default {
 .btnClose {
   height: 36px;
   border: 0px;
+  border-radius: 0px;
 }
 .btnClose {
   width: 60px;
