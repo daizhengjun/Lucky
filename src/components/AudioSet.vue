@@ -1,6 +1,6 @@
 <template>
   <div class="audio-set">
-    <el-select class="selmusic" v-model="valuemusic" placeholder="请选择背景音乐" clearable>
+    <el-select class="selmusic" v-model="valuemusic" placeholder="请选择背景音乐">
       <el-option v-for="(item, key) in optsmusic" :key="key" :value="item"></el-option>
     </el-select>
   </div>
@@ -12,6 +12,7 @@ export default {
     return {
       valuemusic: "",
       optsmusic: [
+        "静音",
         "背景音乐一",
         "背景音乐二",
         "背景音乐三",

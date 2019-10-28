@@ -10,16 +10,18 @@
       :before-close="handleClose"
     >
       <el-tabs class="tabs" v-model="activeName" @tab-click="handleClick">
-        <el-tab-pane label="系统管理" name="first">
+        <el-tab-pane label="系统管理" name="sys">
           <SystemSet />
         </el-tab-pane>
-        <el-tab-pane label="人员管理" name="second">
-          <MemberSet />
-        </el-tab-pane>
-        <el-tab-pane label="声音管理" name="third">
+        <el-tab-pane label="声音管理" name="audio">
           <AudioSet />
         </el-tab-pane>
-        <el-tab-pane label="定时任务补偿" name="fourth">定时任务补偿</el-tab-pane>
+        <el-tab-pane label="人员管理" name="members">
+          <MemberSet />
+        </el-tab-pane>
+        <el-tab-pane label="奖品管理" name="awards">
+          <AwardSet />
+        </el-tab-pane>
       </el-tabs>
     </el-drawer>
   </div>
@@ -29,6 +31,7 @@
 import SystemSet from "./SystemSet";
 import MemberSet from "./MemberSet";
 import AudioSet from "./AudioSet";
+import AwardSet from "./AwardSet";
 
 export default {
   data() {
@@ -42,7 +45,8 @@ export default {
   components: {
     SystemSet,
     MemberSet,
-    AudioSet
+    AudioSet,
+    AwardSet
   },
   methods: {
     handleClose(done) {
