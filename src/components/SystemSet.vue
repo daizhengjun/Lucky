@@ -1,9 +1,9 @@
 <template>
   <div class="system-set">
     <div class="primary-caption">
-      标题：
+      <div class="title">标题：</div>
       <el-input
-        class="inputcaption"
+        class="main-caption inputcaption"
         v-model="title"
         placeholder="请输入标题"
         maxlength="20"
@@ -13,8 +13,8 @@
       ></el-input>
       <el-color-picker v-model="color1"></el-color-picker>
     </div>
-    <div>
-      副标题：
+    <div class="sub-caption">
+      <div class="title">副标题：</div>
       <el-input
         class="inputcaption"
         v-model="subTitle"
@@ -64,13 +64,27 @@ export default {
 </script>
 
 <style lang="less" scoped>
+.primary-caption,
+.sub-caption {
+  display: flex;
+  align-self: center;
+  align-items: center;
+  justify-content: flex-start;
+}
 .inputcaption,
 .selbg {
   border: 1px solid #409eff;
   border-radius: 5px;
   margin: 5px;
 }
+.selbg {
+  margin-left: 74px;
+}
 .inputcaption {
   width: 440px;
+  margin-left: 5px;
+}
+.title {
+  width: 70px;
 }
 </style>

@@ -19,7 +19,7 @@
         <el-tab-pane label="人员管理" name="members">
           <MemberSet />
         </el-tab-pane>
-        <el-tab-pane label="奖品管理" name="awards">
+        <el-tab-pane label="项目管理" name="awards">
           <AwardSet />
         </el-tab-pane>
       </el-tabs>
@@ -36,7 +36,7 @@ import AwardSet from "./AwardSet";
 export default {
   data() {
     return {
-      activeName: "first",
+      activeName: "sys",
       drawer: false,
       showClose: false,
       direction: "ttb"
